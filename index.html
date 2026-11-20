@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unit 11 – Describing character</title>
+<style>
+:root{color-scheme:light dark;--bg:#f6f2fc;--card:#fff;--tx:#1e1a2b;--mu:#675f7d;--ac:#6b3fbf;--ac2:#ece4fa;--ok:#14733f;--okb:#d9f3e4;--bad:#b3261e;--badb:#fde3e0;--bd:#d6cbee;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--bg:#16121f;--card:#211b30;--tx:#f0ecf9;--mu:#a69dbd;--ac:#b794f6;--ac2:#33284d;--ok:#6fdc9b;--okb:#17382a;--bad:#ff8d85;--badb:#47201f;--bd:#3d3357}}
+:root[data-theme=dark]{color-scheme:dark;--bg:#16121f;--card:#211b30;--tx:#f0ecf9;--mu:#a69dbd;--ac:#b794f6;--ac2:#33284d;--ok:#6fdc9b;--okb:#17382a;--bad:#ff8d85;--badb:#47201f;--bd:#3d3357}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:20px/1.6 Georgia,"Times New Roman",serif}
+header{padding:18px 28px 6px}
+h1{margin:0;font:700 30px/1.2 system-ui,sans-serif;color:var(--ac)}
+.sub{color:var(--mu);font:16px system-ui,sans-serif}
+#nav{display:flex;flex-wrap:wrap;gap:8px;padding:10px 28px}
+button{font:600 18px system-ui,sans-serif;cursor:pointer;border:2px solid var(--bd);background:var(--card);color:var(--tx);border-radius:10px;padding:8px 18px}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.tab.on,.opt.on{background:var(--ac);border-color:var(--ac);color:var(--bg)}
+main{max-width:1000px;margin:8px auto 40px;padding:0 20px}
+.card{background:var(--card);border:2px solid var(--bd);border-radius:14px;padding:22px 28px}
+h2{margin:0 0 4px;font:700 24px system-ui,sans-serif}
+.q{margin:0 0 14px;font-weight:700}
+.bank{display:flex;flex-wrap:wrap;gap:8px;background:var(--ac2);padding:10px 14px;border-radius:10px;margin-bottom:14px}
+.bank span{font-style:italic}
+.ref{background:var(--ac2);border-radius:10px;padding:10px 16px;margin-bottom:14px;font-size:18px}
+.ref table{border-collapse:collapse;font:16px system-ui,sans-serif}.ref td,.ref th{border:1px solid var(--bd);padding:2px 10px}
+.g h3{font:700 22px system-ui,sans-serif;color:var(--ac);margin:.9em 0 .2em}.g h3:first-child{margin-top:0}
+.g p.ex{color:var(--ac);font-style:italic;margin:.2em 0 .9em 1.2em}.g ul{margin:.3em 0;padding-left:1.3em}
+.g table{border-collapse:collapse;width:100%;font:18px/1.4 system-ui,sans-serif;margin:.5em 0 1em}.g td,.g th{border:1px solid var(--bd);padding:7px 10px;text-align:left;vertical-align:top}.g th{background:var(--ac2)}
+.g .warn{background:var(--badb);border-radius:8px;padding:6px 12px}
+.ln{margin:.5em 0}
+input[type=text]{font:inherit;width:11em;padding:2px 8px;border:2px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx)}
+input.w{width:19em}
+input.ok{border-color:var(--ok);background:var(--okb)}input.bad{border-color:var(--bad);background:var(--badb)}
+.fix{color:var(--ok);font:600 16px system-ui,sans-serif;margin-left:6px}
+.hint{color:var(--mu);font-size:17px}
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:.5em 0;padding:4px 8px;border-radius:8px}
+.row.ok{background:var(--okb)}.row.bad{background:var(--badb)}
+.row .t{flex:1 1 360px}
+.opt{padding:4px 14px;font-size:17px}
+.opt.right{border-color:var(--ok);box-shadow:0 0 0 2px var(--ok)}.opt.wrong{border-color:var(--bad);text-decoration:line-through}
+.note{flex-basis:100%;color:var(--ok);font:600 17px system-ui,sans-serif}
+.bar{display:flex;align-items:center;gap:14px;margin-top:20px}
+.pri{background:var(--ac);border-color:var(--ac);color:var(--bg)}
+#sc{font:700 22px system-ui,sans-serif}
+img{max-width:100%;height:auto;border-radius:8px;margin:0 0 14px}audio{width:100%;margin:0 0 14px}
+textarea.o{width:100%;box-sizing:border-box;font:16px/1.5 system-ui,sans-serif;padding:10px;border:2px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx)}
+.start{max-width:520px;margin:30px auto}.start label{display:block;margin:14px 0 4px;font:600 18px system-ui,sans-serif}.start input[type=text]{width:100%;box-sizing:border-box}
+.rq label{margin:0 6px;font:600 17px system-ui,sans-serif}.rq input{width:20px;height:20px;vertical-align:middle;margin-right:3px}
+</style></head><body>
+<header><h1>Unit 11 · Describing character</h1><div class="sub">English Vocabulary in Use · Pre-intermediate and Intermediate</div></header>
+<nav id="nav"></nav><main><div class="card" id="main"></div></main>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const nz=s=>s.toLowerCase().replace(/[().,]/g,'').replace(/\s+/g,' ').trim();
+const med=[["United States",35,39,29,103],["China",32,17,14,63],["Russia",27,27,38,92],["Australia",17,16,16,49],["Japan",16,9,12,37],["Germany",14,16,18,48],["France",11,9,13,33],["Italy",10,11,11,32],["South Korea",9,12,9,30],["Great Britain",9,9,12,30]];
+const medT=`<table><tr><th>Rank</th><th>Country</th><th>Gold</th><th>Silver</th><th>Bronze</th><th>Total</th></tr>${med.map((r,i)=>`<tr><td>${i+1}</td>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</table>`;
+const E=[
+{id:'A',type:'info',t:'A · What are you like?',q:'',img:'a-describe-character',html:`<ol style="list-style:none;padding:0;font-size:18px"><li><sup>1</sup> what you are like as a person</li><li><sup>2</sup> believe that good things will happen</li><li><sup>3</sup> can be trusted to do what people expect you to do</li><li><sup>4</sup> feeling sure about yourself and your abilities</li><li><sup>5</sup> not confident, especially about meeting or talking to new people</li><li><sup>6</sup> putting a lot of effort into your work and spending a lot of time on it</li><li><sup>7</sup> the ability to laugh and understand when something is funny</li><li><sup>8</sup> a serious person is quiet and doesn’t laugh very much</li><li><sup>9</sup> able to stay calm and not get angry, especially when things take a lot of time</li></ol>
+<h3>Common mistakes</h3><p>A: What’s he like? (NOT <s>How is he like?</s>)<br>B: He’s very <b>nice</b>. (NOT He’s <s>like</s> very nice.)</p>`},
+{id:'B',type:'info',t:'B · Opposites',q:'',html:`<table><tr><th>positive</th><th>negative</th></tr>
+<tr><td><b>generous</b> [happy to give more money or help than is usual]</td><td><b>mean</b></td></tr>
+<tr><td><b>honest</b> [an honest person tells the truth]</td><td><b>dishonest</b></td></tr>
+<tr><td><b>clever, intelligent</b> [able to learn and understand things quickly]</td><td><b>stupid</b></td></tr>
+<tr><td><b>calm</b> [relaxed and not worried or frightened]</td><td><b>nervous, anxious</b></td></tr></table>
+<h3>Language help</h3><p>We use <b>kind</b> to describe someone who wants to help people a lot, and <b>nice, friendly</b> or <b>pleasant</b> for someone who is happy to talk to people. The opposites are <b>unkind, unfriendly</b> and <b>unpleasant</b>.</p>`},
+{id:'C',type:'info',t:'C · Describing a friend',q:'',html:`<p class=ex style="margin-left:0">“The first thing I would say about my best friend is that she’s very <b>sensible</b><sup>1</sup>. I’ve never known Emilia to do anything <b>silly</b><sup>2</sup>, and I know I can always <b>trust</b><sup>3</sup> her. She’s also very <b>creative</b><sup>4</sup>; she makes things, and she’s a very <b>talented</b><sup>5</sup> artist. I <b>wish</b><sup>6</sup> I had her <b>talent</b>.”</p>
+<ol style="list-style:none;padding:0;font-size:18px"><li><sup>1</sup> practical; doesn’t do stupid things</li><li><sup>2</sup> not sensible, a bit stupid</li><li><sup>3</sup> be sure that she is honest</li><li><sup>4</sup> good at thinking of new ideas and using her imagination</li><li><sup>5</sup> has a natural ability</li><li><sup>6</sup> I would like to have her talent but I haven’t got it.</li></ol>`},
+{id:'11.1',type:'pairs',t:'11.1 · Opposites',q:'Find five pairs of opposites and put them into the correct columns.',bank:['<s>nice</s>','mean','sensible','lazy','calm','generous','unpleasant','hard-working','silly','nervous']},
+{id:'11.2',type:'gap',t:'11.2 · Prefixes',q:'Write the opposites using the correct prefix.',lines:['1 <u>un</u>kind','2 {2}friendly','3 {3}pleasant','4 {4}patient','5 {5}honest','6 {6}reliable'],ans:{2:['un'],3:['un'],4:['im'],5:['dis'],6:['un']}},
+{id:'11.3',type:'gap',t:'11.3 · One word',q:'Describe the person in the sentences, in one word.',lines:['1 My brother is in the office from 8 am to 6 pm every day. <u>hard-working</u>','2 He has never bought me a drink in ten years. {2}','3 She often promises to do things but sometimes she forgets. {3}','4 My teacher explains things again and never gets angry. {4}','5 Emma finds it difficult to meet people and talk to strangers. {5}','6 Noah is practical and doesn’t do anything stupid. {6}','7 Our teacher is nice, but he’s quiet and he doesn’t laugh a lot. {7}','8 Danya is very relaxed and doesn’t seem to worry about things. {8}','9 My boss is really good at using his imagination to think of new ideas. {9}','10 Ava can play several musical instruments. {10}'],ans:{2:['mean'],3:['unreliable'],4:['patient'],5:['shy'],6:['sensible'],7:['serious'],8:['calm'],9:['creative'],10:['talented']}},
+{id:'11.4',type:'gap',t:'11.4 · Complete the sentences',q:'Complete the sentences.',lines:['1 My sister can’t wait for anything; she’s so <u>impatient</u>.','2 I get very {2} before exams; I need to try and relax a bit more.','3 I {3} I could paint as well as your brother; he’s so creative.','4 Adeline hasn’t done a thing since she’s been here. Honestly, she’s so {4}.','5 I always have a laugh with my cousin – he’s got a great sense of {5}.','6 My younger sister is able to understand new ideas so quickly; she’s very {6}.','7 If Sarah says she’ll do it, then she’ll do it. I {7} her completely.','8 He’d like to be relaxed and confident, but it’s just not part of his {8}.','9 He failed his exams, but he isn’t {9}. He just didn’t do any work.','10 Aurora helped me bake some cakes last week; she’s very {10}.'],ans:{2:['nervous','anxious'],3:['wish'],4:['lazy'],5:['humour'],6:['clever','intelligent'],7:['trust'],8:['character'],9:['stupid'],10:['kind']}},
+{id:'11.5',type:'quiz',t:'11.5 · Over to you',q:'Complete the quiz for yourself (1 = very positive … 5 = very negative). From all the words on the page, which one would you most like to be, and which one would you hate to be? If possible, compare your answers with someone else.',rows:[['I think I’m very positive.','I’m quite a negative person.'],['I’m usually reliable.','I’m quite unreliable.'],['I’m quite confident.','I’m quite shy.'],['I’m hard-working.','I’m quite lazy.'],['I have a good sense of humour.','I’m usually quite serious.'],['I’m usually quite patient.','I’m quite impatient.']],model:'I think I am quite positive (2), very reliable (1), not very confident (3), a bit lazy (4), have quite a good sense of humour (2) and am quite impatient (5). I would like to be creative and more patient; I would hate to be mean.'},
+{id:'Finish',type:'finish',t:'Finish · Submit your answers',q:''}
+];
+const res={};let who={};let cur=0;
+function nav(){$('#nav').innerHTML=E.map((e,i)=>`<button class="tab${i==cur?' on':''}" onclick="go(${i})">${e.id}</button>`).join('')}
+function go(i){cur=i;nav();draw()}
+const R={
+sort:e=>e.items.map((s,i)=>`<div class=row id=r${i}><span class=t>${s}</span><button class="opt" data-g=g${i}>Young athletes</button><button class="opt" data-g=g${i}>Older athletes</button></div>`).join(''),
+tf:e=>e.items.map((it,i)=>`<div class=row id=r${i}><span class=t>${i+1} ${it[0]}</span><button class=opt data-g=g${i} data-v=1>True</button><button class=opt data-g=g${i} data-v=0>False</button><input type=text class=w placeholder="Correction (if false)"></div>`).join(''),
+multi:e=>`<p>${[1,2,3,4,5].map(n=>'').join('')}</p>`+e.qs.map((q,i)=>`<div class=row id=r${i}><span class=t style="flex-basis:100%">${q[0]}</span>${q[1].map(o=>`<button class=opt data-m=1 data-v="${o}">${o}</button>`).join('')}<span class=note hidden>${q[3]}</span></div>`).join(''),
+pairs:e=>`<div class=g><table><tr><th>positive</th><th>negative</th></tr>${[0,1,2,3,4].map(i=>`<tr class=pr><td><input type=text ${i?'':'value=nice readonly'} autocomplete=off></td><td><input type=text autocomplete=off></td></tr>`).join('')}</table></div><p class=hint id=pk hidden>nice – unpleasant; generous – mean; sensible – silly; hard-working – lazy; calm – nervous</p>`,
+quiz:e=>e.rows.map((r,i)=>`<div class="row rq"><span>${r[0]}</span>${[1,2,3,4,5].map(n=>`<label><input type=radio name=q${i} value=${n}>${n}</label>`).join('')}<span>${r[1]}</span></div>`).join('')+`<p>Most like to be: <input type=text class=w id=qa></p><p>Would hate to be: <input type=text class=w id=qb></p><div class=ref id=model hidden><b>Possible answers:</b> ${e.model}</div>`,
+info:e=>`<div class=g>${e.html}</div>`,
+finish:e=>`<p>Check that you have done every exercise, then press <b>Submit answers</b>.</p><ul>${E.filter(x=>x.type!='info'&&x.type!='finish').map(x=>`<li>${x.id}: ${res[x.id]?'✅ done':'⬜ not done yet'}</li>`).join('')}</ul><button class=pri onclick=fin()>Submit answers</button><div id=out hidden><p>Press <b>Copy</b>, then paste your results into the WhatsApp chat with your teacher.</p><textarea class=o id=txt rows=12 readonly></textarea><div class=bar><button class=pri onclick=cp()>Copy</button><button onclick="window.open('https://wa.me/?text='+encodeURIComponent($('#txt').value))">Open WhatsApp</button><span id=cs></span></div></div>`,
+write:e=>`<div class=ref>${e.note}</div><textarea id=w rows=10 style="width:100%;font:inherit;padding:10px;border:2px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);box-sizing:border-box"></textarea><div class=ref id=model hidden>${e.model}</div>`,
+gap:e=>(e.ref?`<div class=ref>${e.ref}</div>`:'')+e.lines.map(l=>`<p class=ln>${l.replace(/\{(\w+)\}/g,(m,k)=>`<input type=text data-k="${k}" autocomplete=off autocapitalize=off spellcheck=false class="${e.sz=='w'?'w':''}" value="${(e.pre&&e.pre[k])||''}">`)}</p>`).join('')};
+function draw(){const e=E[cur];$('#main').innerHTML=`<h2>${e.t}</h2><p class=q>${e.q}</p>`+(e.img?`<img src="${e.img}.png" alt="">`:'')+(e.audio?`<audio controls src="track-11.mp3"></audio>`:'')+(e.bank?`<div class=bank>${e.bank.map(w=>`<span>${w}</span>`).join('')}</div>`:'')+(e.id=='A4'?`<div class=ref>1 Older athletes are getting faster and fitter. 2 Runners aged 50+ are speeding up less rapidly than young runners. 3 …run on average two minutes faster each year. 4 Older athletes are less likely to achieve their peak fitness than younger athletes. 5 People grow weaker because they are less active than when they were younger.</div>`:'')+R[e.type](e)+(['info','finish'].includes(e.type)?'':`<div class=bar><button class=pri onclick=sub()>Submit</button><button onclick=draw()>Try again</button><span id=sc></span></div>`)}
+document.addEventListener('click',ev=>{const b=ev.target.closest('.opt');if(!b)return;if(b.dataset.m){b.classList.toggle('on');return}$$(`.opt[data-g="${b.dataset.g}"]`).forEach(x=>x.classList.remove('on'));b.classList.add('on')});
+function sub(){const e=E[cur];let ok=0,n=0,bad=[];
+if(e.type=='write'){const w=$('#w').value.trim().split(/\s+/).filter(Boolean).length;$('#sc').textContent=w+' words';res[e.id]={w,text:$('#w').value.trim()};$('#model').hidden=false;return}
+if(e.type=='sort'){res[e.id]={done:1};$('#sc').textContent='Answers saved – now listen and check (Ex. 2).';return}
+if(e.type=='gap'){$$('#main input[data-k]').forEach(inp=>{inp.nextElementSibling?.classList.contains('fix')&&inp.nextElementSibling.remove();const a=e.ans[inp.dataset.k],g=a.some(x=>nz(x)==nz(inp.value));n++;g&&ok++;!g&&bad.push(inp.dataset.k+': '+(inp.value.trim()||'–'));inp.className=(g?'ok':'bad')+(inp.classList.contains('w')?' w':'');if(!g)inp.insertAdjacentHTML('afterend',`<span class=fix>✓ ${a[0]}</span>`)})}
+if(e.type=='tf')e.items.forEach((it,i)=>{const r=$('#r'+i),s=r.querySelector('.opt.on'),g=s&&s.dataset.v==it[1];n++;g&&ok++;r.className='row '+(g?'ok':'bad');r.querySelectorAll('.opt').forEach(o=>{o.classList.toggle('right',o.dataset.v==it[1]);});if(!it[1]&&!r.querySelector('.note'))r.insertAdjacentHTML('beforeend',`<span class=note>✓ ${it[2]}</span>`)});
+if(e.type=='multi')e.qs.forEach((q,i)=>{const r=$('#r'+i),sel=[...r.querySelectorAll('.opt.on')].map(x=>x.dataset.v),g=sel.length==q[2].length&&q[2].every(x=>sel.includes(x));n++;g&&ok++;r.className='row '+(g?'ok':'bad');r.querySelectorAll('.opt').forEach(o=>{o.classList.toggle('right',q[2].includes(o.dataset.v));o.classList.toggle('wrong',o.classList.contains('on')&&!q[2].includes(o.dataset.v))});r.querySelector('.note').hidden=false});
+if(e.type=='quiz'){const v=e.rows.map((r,i)=>{const c=document.querySelector(`input[name=q${i}]:checked`);return c?c.value:'-'}).join(' ');res[e.id]={text:'Quiz (rows 1-6): '+v+'\nMost like to be: '+($('#qa').value.trim()||'-')+'\nWould hate to be: '+($('#qb').value.trim()||'-')};$('#model').hidden=false;$('#sc').textContent='Answers saved';return}
+if(e.type=='pairs'){const M={nice:'unpleasant',generous:'mean',sensible:'silly','hard working':'lazy',calm:'nervous'},u=[],h=x=>nz(x).replace(/-/g,' ');$$('#main .pr').forEach(tr=>{const i=tr.querySelectorAll('input'),p=h(i[0].value),q=h(i[1].value),g=M[p]===q&&!u.includes(p);u.push(p);n++;g&&ok++;!g&&bad.push((i[0].value.trim()||'–')+'/'+(i[1].value.trim()||'–'));i[0].className=i[1].className=g?'ok':'bad'});$('#pk').hidden=ok==n}
+res[e.id]={ok,n,bad};$('#sc').textContent=`Score: ${ok} / ${n}`}
+function fin(){let t=`Unit 11 – Describing character\nName: ${who.n}\nGroup: ${who.g}\nDate: ${new Date().toLocaleDateString()}\n`;
+E.forEach(x=>{if(x.type=='info'||x.type=='finish')return;const r=res[x.id];t+='\n'+x.id+': '+(!r?'not done':r.text!==undefined?(r.w!==undefined?r.w+' words':'')+'\n'+r.text:r.n?r.ok+'/'+r.n+(r.bad.length?' | wrong: '+r.bad.join('; '):''):'done')});
+$('#txt').value=t;$('#out').hidden=false;$('#cs').textContent=''}
+function cp(){const t=$('#txt'),d=()=>$('#cs').textContent='Copied ✓ Now paste it into WhatsApp';t.select();t.setSelectionRange(0,99999);try{navigator.clipboard.writeText(t.value).then(d,()=>{document.execCommand('copy');d()})}catch(x){document.execCommand('copy');d()}}
+function begin(){const n=$('#sn').value.trim(),g=$('#sg').value.trim();if(!n||!g){$('#se').textContent='Please enter your name and group number.';return}who={n,g};$('.sub').textContent=n+' · Group '+g;go(0)}
+$('#main').innerHTML=`<div class=start><h2>Welcome</h2><p>Enter your name and group number to begin.</p><label for=sn>Your name</label><input type=text id=sn autocomplete=name><label for=sg>Group number</label><input type=text id=sg><p id=se class=fix style="color:var(--bad)"></p><button class=pri onclick=begin()>Start</button></div>`;
+</script></body></html>
